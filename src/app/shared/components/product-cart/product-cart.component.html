@@ -1,0 +1,13 @@
+
+<div class="card-box col-lg-4  ">
+  <div class="card">
+    <div>
+      <img src="{{product.image}}" class="card-img-top imgProduct" alt="Product">
+    </div>
+    <div class="card-body text-start p-4 d-flex flex-column align-items-start">
+      <h5 class="card-title fw-bold">{{product.title}}</h5>
+      <p class="card-text mb-4">{{product.description | textLimitation}}</p>
+      <a class="btn btn-primary mt-auto" [routerLink]="['/product', product.id]">Подробнее</a>
+    </div>
+  </div>
+</div>

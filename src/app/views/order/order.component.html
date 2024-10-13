@@ -1,0 +1,117 @@
+<section class="form-box container-xl mb-5 col-sm-5 col-10" [style.display]="formDisplay===true?'block':'none'">
+  <div class="my-4 text-center">
+    <p class="fs-2 fw-bold text-center">Сделать заказ</p>
+  </div>
+  <form class="form row col-lg-10 gy-1 mx-auto" id="form"
+        [formGroup]="orderForm">
+    <div class="mb-3 col-xxl-4">
+      <label for="name" class="form-label" [class]="{'text-danger': name?.invalid && (name?.dirty
+              || name?.touched)}">Имя</label>
+      <input type="text" class="form-control" id="name" name="name"
+             formControlName="name"
+              [class]="{'border-danger': name?.invalid && (name?.dirty
+              || name?.touched) }">
+      <div *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+        <div class="text-danger styleError" *ngIf="name?.errors?.['required']">Введите имя</div>
+        <div class="text-danger styleError " *ngIf="name?.errors?.['pattern']">Имя не должно содержать цифры и символы</div>
+      </div>
+    </div>
+
+
+    <div class="mb-3 col-xxl-4">
+      <label for="lastName" class="form-label" [class]="{'text-danger': lastName?.invalid && (lastName?.dirty
+              || lastName?.touched)}">Фамилия</label>
+      <input type="text" class="form-control" id="lastName" name="lastName"
+             formControlName="lastName"
+             [class]="{'border-danger': lastName?.invalid && (lastName?.dirty || lastName?.touched) }">
+      <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">
+        <div class="text-danger styleError" *ngIf="lastName?.errors?.['required']">Введите фамилию</div>
+        <div class="text-danger styleError" *ngIf="lastName?.errors?.['pattern']">Фамилия не должна содержать цифры и символы</div>
+      </div>
+    </div>
+
+
+    <div class="mb-3 col-xxl-4">
+      <label for="phone" class="form-label" [class]="{'text-danger': phone?.invalid && (phone?.dirty
+              || phone?.touched)}">Телефон</label>
+      <input type="text" class="form-control formTel" id="phone" name="phone"
+             formControlName="phone"
+             [class]="{'border-danger': phone?.invalid && (phone?.dirty
+              || phone?.touched) }">
+      <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+        <div class="text-danger styleError " *ngIf="phone?.errors?.['required']">Введите номер телефона</div>
+        <div class="text-danger styleError " *ngIf="phone?.errors?.['pattern']">Номер телефона должен содержать 11 цифр</div>
+      </div>
+    </div>
+
+
+    <div class="mb-3 col-xl-6">
+      <label for="country" class="form-label" [class]="{'text-danger': country?.invalid && (country?.dirty
+              || country?.touched)}">Страна</label>
+      <input type="text" class="form-control" id="country" name="country"
+             formControlName="country"
+             [class]="{'border-danger': country?.invalid && (country?.dirty
+              || country?.touched) }">
+      <div *ngIf="country?.invalid && (country?.dirty || country?.touched)">
+        <div class="text-danger styleError " *ngIf="country?.errors?.['required']">Введите строну</div>
+      </div>
+    </div>
+
+
+    <div class="mb-3 col-xl-6">
+      <label for="indexAddress" class="form-label" [class]="{'text-danger': indexAddress?.invalid && (indexAddress?.dirty
+              || indexAddress?.touched)}">Индекс</label>
+      <input type="text" class="form-control formIndex" id="indexAddress" name="indexAddress"
+             formControlName="indexAddress"
+             [class]="{'border-danger': indexAddress?.invalid && (indexAddress?.dirty
+             || indexAddress?.touched) }">
+      <div *ngIf="indexAddress?.invalid && (indexAddress?.dirty || indexAddress?.touched)">
+        <div class="text-danger styleError " *ngIf="indexAddress?.errors?.['required']">Введите индекс</div>
+      </div>
+    </div>
+
+
+    <div class="mb-3 col-12">
+      <label for="address" class="form-label" [class]="{'text-danger': address?.invalid && (address?.dirty
+              || address?.touched)}">Адрес</label>
+      <input type="text" class="form-control" id="address" name="address"
+             formControlName="address"
+             [class]="{'border-danger': address?.invalid && (address?.dirty
+              || address?.touched) }">
+      <div *ngIf="address?.invalid && (address?.dirty || address?.touched)">
+        <div class="text-danger styleError " *ngIf="address?.errors?.['required']">Введите адрес</div>
+        <div class="text-danger styleError " *ngIf="address?.errors?.['pattern']">Адрес может содержать: буквы, цифры, пробелы, дефис и флеш</div>
+      </div>
+    </div>
+
+
+    <div class="mb-3 col-12">
+      <label for="product" class="form-label">Название продукта</label>
+      <input type="text" class="form-control" id="product" name="product" formControlName="product" productInput>
+    </div>
+
+    <div class="mb-3 col-12">
+      <label for="comment" class="form-label">Коментарии</label>
+      <input type="text" class="form-control" id="comment" name="comment" formControlName="comment" >
+    </div>
+
+    <div class="btn-box">
+      <button type="submit" class="btnForm btn btn-primary px-5  open-popup-link"
+              (click)="createOrder()">
+        Отправить
+      </button>
+      <div class="btn-text" [style.display]="requestRepeat===true?'inline-block':'none'">
+        <span class="text-danger" >Попробуйте ещё раз</span>
+      </div>
+    </div>
+
+  </form>
+
+</section>
+
+<div class="container" [style.display]="requestGood===true?'block':'none'">
+  <div class="box-text bg-primary-subtle py-5 rounded-4 " role="alert" id="formFinish" >
+    <h4 class="alert-heading text-center fw-bold">Спасибо за заказ!</h4>
+  </div>
+</div>
+

@@ -1,0 +1,31 @@
+.accordion-box {
+  max-width: 870px;
+  margin: 0 auto;
+}
+
+
+.popup {
+  max-width: 186px;
+  height: 180px;
+  padding: 20px;
+  border: 2px solid rgb(13, 110, 253);
+  border-radius: 20px;
+  position: fixed;
+  top:105px;
+  right: 40px;
+
+}
+
+.popup-text p {
+  font-weight: bold;
+
+}
+.popup-active a {
+  display: block;
+  text-decoration: none;
+  max-width: 180px;
+  background: rgb(13, 110, 253);
+  color: white;
+  margin: 0 auto;
+
+}

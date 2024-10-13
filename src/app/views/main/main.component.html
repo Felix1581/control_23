@@ -1,0 +1,91 @@
+
+
+<section class=" my-4 mt-5">
+  <div class="container single-item">
+    <img class="imgMain  img-fluid" src="assets/images/chay-s-apelsinom-sayt-2%201.png" alt="asd">
+    <img src="assets/images/left.png" alt="arrow" class="arrow-left">
+    <img src="assets/images/right.png" alt="arrow" class="arrow-right">
+  </div>
+</section>
+
+<section class="my-5 ">
+  <div class="my-4">
+    <p class="fs-2 fw-bold text-center">Ответы на часто задаваемые вопросы</p>
+  </div>
+  <div  class="accordion-box">
+    <ngb-accordion #acc="ngbAccordion" >
+      <ngb-panel title="Собираете ли вы подарочные боксы?" id="config-panel-one">
+        <ng-template ngbPanelContent>
+          Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и
+          стоимость!
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Сколько у вас разновидностей чая?">
+        <ng-template ngbPanelContent>
+          На данный момент у нас имеется шесть разновидностей чая, но ассортимент постоянно
+          увеличивается.
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="В какой срок осуществляется доставка?">
+        <ng-template ngbPanelContent>
+          У нас самая быстрая доставка. После оплаты заказа доставка по городу займет 4-6 часов, в
+          другой
+          город все зависит от удаленности пункта назначения примерно от двух до четырех дней.
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="У вас обновляется ассортимент?">
+        <ng-template ngbPanelContent>
+          Ассортимент обновляется каждый день.
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Какого объема у вас пачки чая?">
+        <ng-template ngbPanelContent>
+          Одна пачка чая содержит 250 граммов продукта.
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+
+  </div>
+
+<!--<div id="accordion" class="row justify-content-center">-->
+<!--    <h3 class="p-4 pe-5 rounded-4 mb-3 col-lg-6 mx-2 bg-primary text-white">Собираете ли вы подарочные боксы?</h3>-->
+<!--    <div class="col-lg-6 mx-2">-->
+<!--      <p>Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и-->
+<!--        стоимость!</p>-->
+<!--    </div>-->
+<!--    <h3 class="p-4 pe-5 rounded-4 mb-3 col-lg-6 mx-2 bg-primary text-white">Сколько у вас разновидностей чая?</h3>-->
+<!--    <div class=" col-lg-6 mx-2">-->
+<!--      <p>На данный момент у нас имеется шесть разновидностей чая, но ассортимент постоянно-->
+<!--        увеличивается. </p>-->
+<!--    </div>-->
+<!--    <h3 class="p-4 pe-5 rounded-4 mb-3 col-lg-6 mx-2 bg-primary text-white">В какой срок осуществляется доставка?</h3>-->
+<!--    <div class=" col-lg-6 mx-2">-->
+<!--      <p>У нас самая быстрая доставка. После оплаты заказа доставка по городу займет 4-6 часов, в-->
+<!--        другой-->
+<!--        город все зависит от удаленнасти пункта назначения примерно от двух до четырех дней.-->
+<!--      </p>-->
+<!--    </div>-->
+<!--    <h3 class="p-4 pe-5 rounded-4 mb-3 col-lg-6 mx-2 bg-primary text-white"> У вас обновляется ассортимент?</h3>-->
+<!--    <div class=" col-lg-6 mx-2">-->
+<!--      <p>Ассортимент обновляется каждый день.</p>-->
+<!--    </div>-->
+<!--    <h3 class="p-4 pe-5 rounded-4 mb-3 col-lg-6 mx-2 bg-primary text-white"> Какого объема у вас пачки чая?</h3>-->
+<!--    <div class=" col-lg-6 mx-2">-->
+<!--      <p>Одна пачка чая содержит 250 граммов продукта.</p>-->
+<!--    </div>-->
+<!--  </div>-->
+</section>
+
+
+
+
+<div class="popup bg-light" id="popup" [style.display]="visibility===true?'block':'none'">
+  <div class="popup-text">
+    <p>Посмотрите наши чайные коллекции!</p>
+  </div>
+  <div class="popup-active">
+    <a class="btn" routerLink="/products">Смотреть</a>
+  </div>
+</div>
+
+

@@ -1,0 +1,11 @@
+.wrapper-products {
+
+}
+.products-box {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-gap: 10px;
+  justify-content: space-between;
+
+
+}
