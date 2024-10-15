@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+:host ::ng-deep .accordion-button {
+  background-color: rgb(13, 110, 253);
+  color: white;
+}
 
 .popup {
   max-width: 186px;
